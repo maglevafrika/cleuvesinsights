@@ -21,16 +21,21 @@ export default function Hero() {
 
       {/* ── LV-inspired Navbar ── */}
       <nav style={{
-        position: "relative",
-        zIndex: 50,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "0 32px",
-        height: 56,
-        borderBottom: "1px solid rgba(255,255,255,0.08)",
-        background: "transparent",
-      }}>
+  position: "fixed",        // ← was "relative"
+  top: 0,                   // ← pin to top
+  left: 0,                  // ← full width
+  right: 0,                 // ← full width
+  zIndex: 50,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  padding: "0 32px",
+  height: 56,
+  borderBottom: "1px solid rgba(255,255,255,0.08)",
+  background: "rgba(13, 8, 32, 0.85)",   // ← was "transparent", now dark + slight opacity
+  backdropFilter: "blur(12px)",           // ← frosted glass effect so it feels premium
+  WebkitBackdropFilter: "blur(12px)",     // ← Safari support
+}}>
         {/* Left: Menu */}
         <div style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer" }}>
           <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
@@ -79,6 +84,8 @@ export default function Hero() {
           </div>
         </div>
       </nav>
+
+      <div style={{ height: 56 }} />
 
       {/* Purple glow blobs */}
       <div style={{ position: "absolute", top: "15%", left: "50%", transform: "translateX(-50%)", width: 600, height: 400, background: "radial-gradient(ellipse, rgba(108,71,255,0.18) 0%, transparent 70%)", pointerEvents: "none" }} />

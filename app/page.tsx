@@ -1,0 +1,98 @@
+"use client";
+import Link from "next/link";
+
+const roles = [
+  "Day traders", "Long-term investors", "Portfolio managers", "Retail investors",
+  "Swing traders", "Dividend seekers", "Growth investors", "Value investors",
+  "Day traders", "Long-term investors", "Portfolio managers", "Retail investors",
+  "Swing traders", "Dividend seekers", "Growth investors", "Value investors",
+];
+
+export default function Hero() {
+  return (
+    <section style={{
+      background: "linear-gradient(160deg, #0d0820 0%, #130a2e 30%, #0a0a14 70%, #080810 100%)",
+      minHeight: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      position: "relative",
+      overflow: "hidden",
+    }}>
+
+      {/* Purple glow blobs */}
+      <div style={{ position: "absolute", top: "15%", left: "50%", transform: "translateX(-50%)", width: 600, height: 400, background: "radial-gradient(ellipse, rgba(108,71,255,0.18) 0%, transparent 70%)", pointerEvents: "none" }} />
+      <div style={{ position: "absolute", top: "40%", left: "20%", width: 300, height: 300, background: "radial-gradient(ellipse, rgba(77,166,255,0.08) 0%, transparent 70%)", pointerEvents: "none" }} />
+
+      {/* Scrolling roles bar */}
+      <div style={{ borderBottom: "1px solid rgba(255,255,255,0.08)", padding: "14px 0", overflow: "hidden", whiteSpace: "nowrap" }}>
+        <div style={{ display: "flex", width: "max-content", animation: "ticker 30s linear infinite" }}>
+          {roles.map((role, i) => (
+            <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: 12, padding: "0 24px" }}>
+              <span style={{ fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.55)", fontFamily: "'Space Grotesk', sans-serif" }}>{role}</span>
+              {i < roles.length - 1 && <span style={{ width: 4, height: 4, borderRadius: "50%", background: "rgba(255,255,255,0.2)", display: "inline-block" }} />}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Hero content */}
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "80px 24px", textAlign: "center" }}>
+
+        {/* Eyebrow */}
+        <div style={{ fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.5)", letterSpacing: "0.04em", marginBottom: 32, fontFamily: "'Space Grotesk', sans-serif" }}>
+          Fastest growing stock picks platform in Africa
+        </div>
+
+        {/* Headline */}
+        <h1 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(48px, 8vw, 96px)", fontWeight: 700, lineHeight: 1.05, color: "#fff", maxWidth: 800, marginBottom: 12 }}>
+          A{" "}
+          <span style={{ position: "relative", display: "inline-block" }}>
+            <span style={{
+              position: "absolute", inset: "-6px -18px",
+              border: "2px solid rgba(108,71,255,0.9)",
+              borderRadius: "50%",
+              transform: "rotate(-2deg)",
+            }} />
+            <span style={{ fontStyle: "italic", fontWeight: 700 }}>smarter</span>
+          </span>
+          {" "}way to
+        </h1>
+        <h1 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(48px, 8vw, 96px)", fontWeight: 700, lineHeight: 1.05, color: "#fff", maxWidth: 800, marginBottom: 40 }}>
+          invest.
+        </h1>
+
+        {/* Subtext */}
+        <p style={{ fontSize: "clamp(15px, 2vw, 18px)", color: "rgba(255,255,255,0.55)", maxWidth: 540, lineHeight: 1.7, marginBottom: 48, fontFamily: "'Inter', sans-serif" }}>
+          Today&apos;s sharpest investors trust Cleuves Insights to track real picks, read live market data, and move with conviction at the speed the market demands.
+        </p>
+
+        {/* CTAs */}
+        <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+          <Link href="/dashboard"
+           style={{
+              padding: "14px 28px", borderRadius: 10, fontSize: 15, fontWeight: 600,
+              background: "rgba(255,255,255,0.06)", color: "#fff",
+              border: "1px solid rgba(255,255,255,0.2)",
+              cursor: "pointer", fontFamily: "'Space Grotesk', sans-serif",
+              backdropFilter: "blur(8px)", display: "flex", alignItems: "center", gap: 8,
+            }}>
+           
+              View Portfolio →
+            
+          </Link>
+          <button style={{
+            padding: "14px 28px", borderRadius: 10, fontSize: 15, fontWeight: 600,
+            background: "transparent", color: "rgba(255,255,255,0.7)",
+            border: "1px solid rgba(255,255,255,0.12)",
+            cursor: "pointer", fontFamily: "'Space Grotesk', sans-serif",
+          }}>
+            See pricing
+          </button>
+        </div>
+      </div>
+
+      {/* Bottom fade into main content */}
+      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 120, background: "linear-gradient(to bottom, transparent, #0a0a0f)" , pointerEvents: "none",}} />
+    </section>
+  );
+}

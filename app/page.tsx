@@ -21,21 +21,21 @@ export default function Hero() {
 
       {/* ── LV-inspired Navbar ── */}
       <nav style={{
-  position: "fixed",        // ← was "relative"
-  top: 0,                   // ← pin to top
-  left: 0,                  // ← full width
-  right: 0,                 // ← full width
-  zIndex: 50,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  padding: "0 32px",
-  height: 56,
-  borderBottom: "1px solid rgba(255,255,255,0.08)",
-  background: "rgba(13, 8, 32, 0.85)",   // ← was "transparent", now dark + slight opacity
-  backdropFilter: "blur(12px)",           // ← frosted glass effect so it feels premium
-  WebkitBackdropFilter: "blur(12px)",     // ← Safari support
-}}>
+        position: "fixed",        // ← was "relative"
+        top: 0,                   // ← pin to top
+        left: 0,                  // ← full width
+        right: 0,                 // ← full width
+        zIndex: 50,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        padding: "0 32px",
+        height: 56,
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
+        background: "rgba(13, 8, 32, 0.85)",   // ← was "transparent", now dark + slight opacity
+        backdropFilter: "blur(12px)",           // ← frosted glass effect so it feels premium
+        WebkitBackdropFilter: "blur(12px)",     // ← Safari support
+      }}>
         {/* Left: Menu */}
         <div style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer" }}>
           <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
@@ -106,10 +106,7 @@ export default function Hero() {
       {/* Hero content */}
       <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "80px 24px", textAlign: "center" }}>
 
-        {/* Eyebrow */}
-        <div style={{ fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.5)", letterSpacing: "0.04em", marginBottom: 32, fontFamily: "'Space Grotesk', sans-serif" }}>
-          Fastest growing stock picks platform in Africa
-        </div>
+       
 
         {/* Headline */}
         <h1 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(48px, 8vw, 96px)", fontWeight: 700, lineHeight: 1.05, color: "#fff", maxWidth: 800, marginBottom: 12 }}>
@@ -144,7 +141,7 @@ export default function Hero() {
               cursor: "pointer", fontFamily: "'Space Grotesk', sans-serif",
               backdropFilter: "blur(8px)", display: "flex", alignItems: "center", gap: 8,
             }}>
-              View Portfolio →
+              View 
           </Link>
           <button style={{
             padding: "14px 28px", borderRadius: 10, fontSize: 15, fontWeight: 600,

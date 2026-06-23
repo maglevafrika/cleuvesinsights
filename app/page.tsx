@@ -43,7 +43,7 @@ export default function Hero() {
             <rect y="5" width="18" height="1.5" rx="0.75" fill="rgba(255,255,255,0.7)" />
             <rect y="10" width="18" height="1.5" rx="0.75" fill="rgba(255,255,255,0.7)" />
           </svg>
-          <span style={{ fontSize: 12, fontWeight: 500, color: "rgba(255,255,255,0.7)", letterSpacing: "0.08em", fontFamily: "'Space Grotesk', sans-serif", textTransform: "uppercase" }}>Menu</span>
+         
         </div>
 
         {/* Center: Brand */}
@@ -59,9 +59,7 @@ export default function Hero() {
             Contact Us
           </span>
           {/* Wishlist */}
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" style={{ cursor: "pointer" }}>
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-          </svg>
+          
           {/* Account */}
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5" style={{ cursor: "pointer" }}>
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
@@ -69,18 +67,8 @@ export default function Hero() {
           </svg>
           {/* Bag with count */}
           <div style={{ position: "relative", cursor: "pointer" }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5">
-              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <path d="M16 10a4 4 0 0 1-8 0" />
-            </svg>
-            <span style={{
-              position: "absolute", top: -6, right: -6,
-              width: 14, height: 14, borderRadius: "50%",
-              background: "rgba(108,71,255,0.9)", color: "#fff",
-              fontSize: 9, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center",
-              fontFamily: "'Space Grotesk', sans-serif",
-            }}>0</span>
+            
+           
           </div>
         </div>
       </nav>
